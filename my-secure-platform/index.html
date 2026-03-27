@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصه هاني طومر | تسجيل الدخول  </title>
+    <link rel="stylesheet" href="css/style2.css">
+
+</head>
+<body oncontextmenu="return false;">
+
+    <div class="login-box">
+        <img src="logo(1).png" class="nav-logo">
+        <h2>تسجيل الدخول في منصه الشهيد طومر</h2>
+        <p class="subtitle">استخدم البيانات التي حصلت عليها للمتابعة</p>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+        </div>
+        
+        <div class="input-group">
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+        </div>
+
+        <div id="error-msg"></div>
+
+        <button type="button" id="loginBtn" onclick="handleLogin()">متابعة</button>
+
+        <span class="policy-link" onclick="toggleModal(true)">الشروط والأحكام</span>
+        <p class="footer-text">محمي بواسطة نظام تشفير درع المحتوى</p>
+    </div>
+
+   <div id="policyModal" class="modal">
+    <div class="modal-content">
+        <h3>شروط وأحكام استخدام المنصة</h3>
+        <p style="color: #86868b; font-size: 0.95rem;">
+            بالوصول إلى هذه المنصة واستخدام محتواها، فإنك توافق على الشروط التالية:
+        </p>
+        <ul>
+            <li><b>الاستخدام الشخصي:</b> حسابك مرتبط بجهاز واحد فقط لضمان الخصوصية وحماية المحتوى.</li>
+            <li><b>حقوق الملكية:</b> جميع المحتويات محمية بحقوق الملكية ولا يجوز إعادة نشرها أو توزيعها دون إذن.</li>
+            <li><b>التوثيق الرقمي:</b> يتم تسجيل بصمة رقمية باسمك على كل محتوى لضمان الأمان والمتابعة.</li>
+            <li><b>الحماية من النسخ:</b> يُمنع استخدام أي أدوات لتسجيل الشاشة أو استخراج المحتوى.</li>
+            <li><b>المسؤولية:</b> أي خرق لهذه الشروط قد يؤدي إلى تعليق أو إيقاف حسابك فوراً.</li>
+        </ul>
+        <button class="close-btn" onclick="toggleModal(false)">موافق</button>
+    </div>
+</div>
+
+<script>
+  (function() {
+    var element = new Image();
+    Object.defineProperty(element, 'id', {
+      get: function() {
+        window.location.href = "about:blank";
+      }
+    });
+    console.log(element);
+  })();
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="js/nano2.js" defer></script>
+
+
+</body>
+</html>

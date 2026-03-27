@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> منصة | هاني طومر </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body oncontextmenu="return false;"> 
+
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="logo(1).png" class="nav-logo">
+        <div class="nav-title">منصه الشهيد طومر</div>
+    </div>
+    
+    <div class="nav-right-actions">
+        <a href="https://wa.me/+966538290623" target="_blank" class="contact-btn whatsapp">واتساب</a>
+        <a href="https://t.me/toedod" target="_blank" class="contact-btn telegram">تيليجرام</a>
+        <span id="user-display"></span>
+        <button class="btn-logout" onclick="logout()">خروج</button>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="welcome-section">
+        <h1 id="greeting">مرحباً</h1>
+        <p>اللهم ارحم اخي الشهيد هاني طومر واجعل مثواه الجنة، ووفق الطلاب للنجاح والتفوق.</p>
+    </div>
+
+    <div id="loading-spinner">
+        <p>جاري مزامنة بياناتك...</p>
+    </div>
+
+    <div id="content-grid" class="content-grid"></div>
+</div>
+
+<div id="video-modal">
+    <button onclick="closeModal()" class="close-modal-btn">❌ إغلاق</button>
+    <div class="modal-content-wrapper">
+        <video id="modal-video"></video>
+        <div id="modal-wm">اسم العميل</div>
+        
+        <div id="video-controls">
+            <input id="progress-bar" type="range" value="0" min="0" max="100">
+
+            <div class="controls-buttons-row">
+                <button id="cinema-btn" class="apple-btn" onclick="toggleFullscreenModal()">⛶</button> 
+                <button id="forward-btn" class="apple-btn">⏩</button>
+                <button id="play-pause-btn" class="apple-btn play">▶</button>
+                <button id="backward-btn" class="apple-btn">⏪</button>
+                <button id="speed-btn" class="apple-btn">1x</button>
+            </div>
+
+            <div id="speed-menu">
+                <div onclick="setSpeed(0.25)">0.25x</div>
+                <div onclick="setSpeed(0.5)">0.5x</div>
+                <div onclick="setSpeed(1)">1x</div>
+                <div onclick="setSpeed(1.25)">1.25x</div>
+                <div onclick="setSpeed(1.5)">1.5x</div>
+                <div onclick="setSpeed(2)">2x</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  (function() {
+    var element = new Image();
+    Object.defineProperty(element, 'id', {
+      get: function() {
+        window.location.href = "about:blank";
+      }
+    });
+    console.log(element);
+  })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="js/nano.js" defer></script>
+</body>
+</html>
